@@ -1,3 +1,4 @@
+// Run the test above the baseline value - average value or the target value. And it can be 20% more or 100% more than the baseline value. 
 import { sleep } from 'k6';
 import http from 'k6/http';
 
@@ -8,12 +9,12 @@ export const options = {
         //Ramp-up
         {
             duration: '5s',
-            target: 10,// Target we want to achieve - So here K6 will ramp-up the traffic from 1 to 100 in a duration of 5mins
+            target: 100,// Target we want to achieve - So here K6 will ramp-up the traffic from 1 to 100 in a duration of 5mins
         },
         //Steady-Load
         {
             duration: '20s',
-            target: 10,// We are staying with 100 VUs for 20mins
+            target: 100,// We are staying with 100 VUs for 20mins
         },
         //Ramp-down
         {
